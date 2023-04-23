@@ -1,0 +1,23 @@
+Where is the PCB class defined?
+calos.py
+
+What information does a PCB object contain?
+The process control block, it stores the registers of the process to move onto the next process.
+
+When is a PCB created? Which line in which file creates a PCB?
+main.py line 180
+
+What process states have been defined?
+LEGAL_STATES = NEW, READY, RUNNING, WAITING, DONE
+
+Regarding the variable current_proc: Where has it been defined and what is its significance?
+It is the current process, it is defined in the PCB. 
+
+In the TimerController class, what does code that reads
+ 	with self._mutex:
+ 	    code here... 		
+do? I.e., what does with mean in python and why does the code use it?
+Protects the shared resources between the process.
+
+In the TimerController class, explain what the code does when the countdown goes to 0 (i.e., the time expires).
+Stops the current process and sends an interrupt.
